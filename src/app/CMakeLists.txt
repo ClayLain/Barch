@@ -8,6 +8,11 @@ set(source
 )
 
 set(qml_source
+    qml/Background.qml
+    qml/Content.qml
+    qml/DialogButton.qml
+    qml/ErrorPopup.qml
+    qml/FileDelegate.qml
     qml/MainWindow.qml
 )
 
