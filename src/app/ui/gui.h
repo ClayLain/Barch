@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QAbstractItemModel>
 #include <QDir>
 #include <QQmlApplicationEngine>
 
@@ -15,6 +16,7 @@ public:
 
 private:
     QQmlApplicationEngine m_engine;
+    std::unique_ptr<QAbstractItemModel> m_filesModel;
 };
 
 }
