@@ -2,10 +2,10 @@
 
 #include <vector>
 
+#include "byte_utils.h"
+
 namespace barch
 {
-
-using Byte = unsigned char;
 
 struct BitmapView
 {

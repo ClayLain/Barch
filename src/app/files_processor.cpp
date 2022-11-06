@@ -97,7 +97,9 @@ void FilesProcessor::encodeFile(const QString &sourceFilePath, const QString &de
         return;
     }
 
-    image = image.convertToFormat(QImage::Format_Grayscale8);
+    if (!image.isGrayscale()) {
+        image = image.convertToFormat(QImage::Format_Grayscale8);
+    }
 
     const auto bitmap = BitmapView { image.width(), image.height(), image.bits() };
     const auto bytes = archive(bitmap);
