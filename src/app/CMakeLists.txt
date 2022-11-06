@@ -1,9 +1,11 @@
 set(headers
+    files_processor.h
     ui/files_model.h
     ui/gui.h
 )
 
 set(source
+    files_processor.cpp
     main.cpp
     ui/files_model.cpp
     ui/gui.cpp

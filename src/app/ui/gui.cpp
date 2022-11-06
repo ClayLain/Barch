@@ -2,6 +2,8 @@
 
 #include <QQmlContext>
 
+#include <files_processor.h>
+
 #include "files_model.h"
 
 namespace ui
@@ -16,8 +18,9 @@ QVector<QString> supportedFilesFilter()
     };
 }
 
-Gui::Gui(const QDir &workingDirectory)
-    : m_filesModel { std::make_unique<FilesModel>(workingDirectory, supportedFilesFilter()) }
+Gui::Gui(const std::shared_ptr<barch::FilesProcessor> &filesProcessor, const QDir &workingDirectory)
+    : m_filesProcessor { filesProcessor }
+    , m_filesModel { std::make_unique<FilesModel>(workingDirectory, supportedFilesFilter(), m_filesProcessor) }
 {
 }
 
