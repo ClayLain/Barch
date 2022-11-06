@@ -7,4 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+find_package(Qt6 REQUIRED COMPONENTS Core Quick Concurrent REQUIRED)
+
 add_subdirectory(src)
